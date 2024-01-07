@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+  <table id="table1">
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </table>
+  
+  <input type="text" class="user input" id="input"  value="">
+  
+  
+  <button onclick="submit()" class="user submit">Submit</button>
+  
+  
+  <style>
+      .user {
+  display: inline-block;
+}
+
+.user {
+  display: inline-block;
+}
+
+.input {
+  background-color: black;
+  color: lightblue;
+  font-family: cursive;
+  width: 170px;
+}
+
+.submit {
+  background-color: green;
+  color: black;
+  width: 60px;
+}
+
+.submit:active {
+  background-color: black;
+  color: green;
+
+}
+
+th, tr {
+  border: 1px solid black;
+  height: 30px;
+  text-align: center;
+  width: 30px;
+}
+
+table {
+  border: 1px solid black;
+  font-family: cursive;
+  width: 240px;
+}
+
+
+
+  </style>
+
+
+<script>
+    var elements = {
+  "H":[1,1],
+  "He":[18,1],
+  "Li":[1,2],
+  "Be":[2,2],
+  "B":[13,2],
+  "C":[14,2],
+  "N":[15,2],
+  "O":[16,2],
+  "F":[17,2],
+  "Ne":[18,2],
+  "Na":[1,3],
+  "Mg":[2,3],
+  "Al":[13,3],
+  "Si":[14,3],
+  "P":[15,3],
+  "S":[16,3],
+  "Cl":[17,3],
+  "Ar":[18,3],
+  "K":[1,4],
+  "Ca":[2,4],
+  "Sc":[3,4],
+  "Ti":[4,4],
+  "V":[5,4],
+  "Cr":[6,4],
+  "Mn":[7,4],
+  "Fe":[8,4],
+  "Co":[9,4],
+  "Ni":[10,4],
+  "Cu":[11,4],
+  "Zn":[12,4],
+  "Ga":[13,4],
+  "Ge":[14,4],
+  "As":[15,4],
+  "Se":[16,4],
+  "Br":[17,4],
+  "Kr":[18,4],
+  "Rb":[1,5],
+  "Sr":[2,5],
+  "Y":[3,5],
+  "Zr":[4,5],
+  "Nb":[5,5],
+  "Mo":[6,5],
+  "Tc":[7,5],
+  "Ru":[8,5],
+  "Rh":[9,5],
+  "Pd":[10,5],
+  "Ag":[11,5],
+  "Cd":[12,5],
+  "In":[13,5],
+  "Sn":[14,5],
+  "Sb":[15,5],
+  "Te":[16,5],
+  "I":[17,5],
+  "Xe":[18,5],
+  "Cs":[1,6],
+  "Ba":[2,6],
+  "La":[3,6],
+  "Ce":[3,6],
+  "Pr":[3,6],
+  "Nd":[3,6],
+  "Pm":[3,6],
+  "Sm":[3,6],
+  "Eu":[3,6],
+  "Gd":[3,6],
+  "Tb":[3,6],
+  "Dy":[3,6],
+  "Ho":[3,6],
+  "Er":[3,6],
+  "Tm":[3,6],
+  "Yb":[3,6],
+  "Lu":[3,6],
+  "Hf":[4,6],
+  "Ta":[5,6],
+  "W":[6,6],
+  "Re":[7,6],
+  "Os":[8,6],
+  "Ir":[9,6],
+  "Pt":[10,6],
+  "Au":[11,6],
+  "Hg":[12,6],
+  "Tl":[13,6],
+  "Pb":[14,6],
+  "Bi":[15,6],
+  "Po":[16,6],
+  "At":[17,6],
+  "Rn":[18,6],
+  "Fr":[1,7],
+  "Ra":[2,7],
+  "Ac":[3,7],
+  "Th":[3,7],
+  "Pa":[3,7],
+  "U":[3,7],
+  "Np":[3,7],
+  "Pu":[3,7],
+  "Am":[3,7],
+  "Cm":[3,7],
+  "Bk":[3,7],
+  "Cf":[3,7],
+  "Es":[3,7],
+  "Fm":[3,7],
+  "Md":[3,7],
+  "No":[3,7],
+  "Lr":[3,7],
+  "Rf":[4,7],
+  "Db":[5,7],
+  "Sg":[6,7],
+  "Bh":[7,7],
+  "Hs":[8,7],
+  "Mt":[9,7],
+  "Ds":[10,7],
+  "Rg":[11,7],
+  "Cn":[12,7],
+  "Nh":[13,7],
+  "Fl":[14,7],
+  "Mc":[15,7],
+  "Lv":[16,7],
+  "Ts":[17,7],
+  "Og":[18,7]
+}
+
+
+
+
+var keys = Object.keys(elements)
+
+var element = keys[Math.floor(Math.random()*keys.length)]
+var element_X = elements[element][0]
+var element_Y = elements[element][1]
+var input = document.getElementById("input")
+
+var check = false
+var turn = 0
+var color = ""
+var guess_X = 0
+var guess_Y = 0
+function submit() {
+  if (turn >= 6) {
+    return    
+  }
+  for (i=0; i<keys.length; i++) {
+    if (input.value == keys[i]) {
+      check = true
+      guess_X = elements[keys[i]][0]
+      guess_Y = elements[keys[i]][1]
+      break
+    } else {
+      check = false
+    }
+  }
+  if (check == false) {
+    return
+  }
+  if (input.value == element) {
+ 
+    color = "green"
+  } else {
+    color = "gray"
+  }
+    turn++
+    
+    var row = turn - 1
+    var cell = 0
+  
+    document.getElementById("table1").rows[row].cells[5].innerText = input.value
+  if (element_X - guess_X < 0) {
+    if (element_Y - guess_Y < 0) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "NW"
+
+    } else if (element_Y - guess_Y > 0) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "SW"
+
+    } else {
+          document.getElementById("table1").rows[row].cells[6].innerText = "W"
+
+    }
+  } else if (element_X - guess_X == 0) {
+    if (element_Y - guess_Y > 0) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "S"
+    } else if (element_Y - guess_Y) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "N"
+
+    }
+  } else if (element_X - guess_X > 0) {
+    if (element_Y - guess_Y == 0) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "E"
+
+    } else if (element_Y - guess_Y > 0) {
+          document.getElementById("table1").rows[row].cells[6].innerText = "SE"
+
+    } else {
+          document.getElementById("table1").rows[row].cells[6].innerText = "NE"
+    }
+  } else {
+    document.getElementById("table1").rows[row].cells[6].innerText = "√"
+  }
+  
+  var curDist = Math.sqrt((Math.abs((element_X - guess_X))**2) + (Math.abs((element_Y - guess_Y))**2))
+  var maxDist = Math.sqrt((7**2) + (32**2))
+  var perErr = 100 -  Math.floor((curDist/maxDist)*100)
+  var curErr = Math.floor((perErr - Math.floor(perErr/20)*20)/10)
+  
+  document.getElementById("table1").rows[row].cells[7].innerText = perErr + "%"
+
+  var counter = 0
+  var new_counter = 0
+
+ for (i=0; i<Math.floor(perErr/20); i++) {
+      document.getElementById("table1").rows[row].cells[i].style.backgroundColor = "green"
+  }
+  
+  for (i=Math.floor(perErr/20); i<curErr+Math.floor(perErr/20); i++) {
+      document.getElementById("table1").rows[row].cells[i].style.backgroundColor = "yellow"
+  }
+  if (curErr === 0) {
+    for (i=Math.floor(perErr/20); i<5; i++) {
+      document.getElementById("table1").rows[row].cells[i].style.backgroundColor = "grey"
+    }
+  } else {
+    for (i=curErr+Math.floor(perErr/20); i<5; i++) {
+      document.getElementById("table1").rows[row].cells[i].style.backgroundColor = "grey"
+    }
+  }
+
+  
+  input.value = ""
+
+  if (perErr == 100) {
+    turn = 7
+  }
+}
+
+
+
+
+
+
+
+
+</script>
+  
+  </body>
+  </html>
